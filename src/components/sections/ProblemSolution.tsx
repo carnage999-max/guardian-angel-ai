@@ -30,25 +30,38 @@ export function ProblemSolution() {
             </section>
 
             {/* Solution Section */}
-            <section id="solution" className="bg-white/2">
-                <div className="max-w-5xl mx-auto text-center px-6">
-                    <span className="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block">The Solution</span>
-                    <h2 className="text-4xl md:text-7xl font-serif font-medium mb-8">Awareness without surveillance.</h2>
-                    <p className="text-xl md:text-3xl text-muted max-w-4xl mx-auto leading-relaxed mb-16">
-                        Guardian Angel AI® performs on-device detection without recording audio, video, or identity.
-                    </p>
+            <section id="solution" className="bg-white/2 relative overflow-hidden">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div className="order-2 lg:order-1">
+                            <span className="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block">The Solution</span>
+                            <h2 className="text-4xl md:text-7xl font-serif font-medium mb-8">Awareness without surveillance.</h2>
+                            <p className="text-xl md:text-2xl text-muted leading-relaxed mb-12">
+                                Guardian Angel AI® performs on-device detection without recording audio, video, or identity.
+                            </p>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-                        {[
-                            { title: 'No Footage', desc: 'No images are ever captured or transmitted.' },
-                            { title: 'No Storage', desc: 'Data is processed in real-time and immediately discarded.' },
-                            { title: 'No Monitoring', desc: 'Alerts are autonomous. No humans are watching.' }
-                        ].map((item) => (
-                            <div key={item.title} className="p-10 rounded-3xl glass border border-white/5 text-left">
-                                <h3 className="text-2xl font-serif font-medium mb-4">{item.title}</h3>
-                                <p className="text-muted leading-relaxed">{item.desc}</p>
+                            <div className="grid grid-cols-1 gap-6">
+                                {[
+                                    { title: 'No Footage', desc: 'No images are ever captured or transmitted.' },
+                                    { title: 'No Storage', desc: 'Data is processed in real-time and immediately discarded.' },
+                                    { title: 'No Monitoring', desc: 'Alerts are autonomous. No humans are watching.' }
+                                ].map((item) => (
+                                    <div key={item.title} className="p-8 rounded-3xl glass border border-white/5 text-left transition-all hover:border-accent/20">
+                                        <h3 className="text-xl font-serif font-medium mb-2">{item.title}</h3>
+                                        <p className="text-sm text-muted leading-relaxed">{item.desc}</p>
+                                    </div>
+                                ))}
                             </div>
-                        ))}
+                        </div>
+
+                        <div className="order-1 lg:order-2 relative aspect-[3/4] rounded-[40px] overflow-hidden border border-white/10 shadow-2xl">
+                            <img
+                                src="/images/guardian-angel-ai_product_black-background.png"
+                                alt="Guardian Angel AI Device"
+                                className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#06080C] via-transparent to-transparent opacity-60" />
+                        </div>
                     </div>
                 </div>
             </section>

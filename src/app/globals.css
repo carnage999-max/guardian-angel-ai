@@ -138,9 +138,17 @@ section {
   }
 }
 
-/* Typography Helpers */
 .heading-gradient {
   background: linear-gradient(to bottom, #EAF0FF 0%, #9AA8C7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
