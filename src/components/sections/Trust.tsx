@@ -40,7 +40,7 @@ export function Trust() {
                 <div className="text-center mb-24">
                     <span className="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block">Our Charter</span>
                     <h2 className="text-4xl md:text-7xl font-serif font-medium mb-8">Built on Trust.</h2>
-                    <p className="text-xl md:text-2xl text-muted max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-xl md:text-2xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
                         Privacy is not a setting. It is the architectural foundation of everything we build.
                     </p>
                 </div>
@@ -52,8 +52,8 @@ export function Trust() {
                                 {principle.icon}
                             </div>
                             <div>
-                                <h3 className="text-2xl font-serif font-medium mb-4">{principle.title}</h3>
-                                <p className="text-muted leading-relaxed text-lg">
+                                <h3 className="text-2xl font-serif font-medium mb-4 text-foreground">{principle.title}</h3>
+                                <p className="text-foreground/75 leading-relaxed text-lg">
                                     {principle.content}
                                 </p>
                             </div>
@@ -65,14 +65,14 @@ export function Trust() {
                 <div className="mt-32 pt-16 border-t border-white/5">
                     <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
                         <div className="max-w-xl text-center lg:text-left">
-                            <h3 className="text-2xl font-serif mb-4">Institutional Compliance</h3>
-                            <p className="text-muted">
+                            <h3 className="text-2xl font-serif mb-4 text-foreground">Institutional Compliance</h3>
+                            <p className="text-foreground/90 leading-relaxed text-lg">
                                 Guardian Angel AI® is engineered to align with the world’s most stringent privacy and safety standards.
                             </p>
                         </div>
                         <div className="flex flex-wrap justify-center lg:justify-end gap-x-8 gap-y-4 max-w-2xl">
                             {complianceAreas.map((item) => (
-                                <span key={item} className="text-sm font-medium tracking-tight text-muted/60 hover:text-muted transition-colors">
+                                <span key={item} className="text-sm font-medium tracking-tight text-foreground/70 hover:text-foreground transition-colors uppercase tracking-[0.1em]">
                                     {item}
                                 </span>
                             ))}

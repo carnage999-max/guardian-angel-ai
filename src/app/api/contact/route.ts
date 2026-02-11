@@ -10,7 +10,7 @@ export async function POST(req: Request) {
 
     const contactTo = process.env.CONTACT_TO ? process.env.CONTACT_TO.split(',') : ['info@guardianangeldevice.com'];
     // Resend trial/onboarding mode often requires sending from onboarding@resend.dev
-    const emailFrom = 'onboarding@resend.dev';
+    const emailFrom = 'info@se7eninc.com';
 
     const { data, error } = await resend.emails.send({
       from: `Guardian Angel AI <${emailFrom}>`,

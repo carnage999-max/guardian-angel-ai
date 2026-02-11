@@ -27,7 +27,7 @@ export function Hero() {
                 </h1>
 
                 <p className="text-xl md:text-3xl text-muted font-medium mb-12 tracking-tight animate-slide-up max-w-2xl">
-                    Aware, when you can’t<span className="text-sm align-top leading-none">®</span>
+                    Aware, when you can’t be.<span className="text-sm align-top leading-none">®</span>
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-5 animate-slide-up" style={{ animationDelay: '0.2s' }}>

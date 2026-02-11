@@ -76,7 +76,7 @@ export function UseCases() {
                 <div className="max-w-2xl">
                     <span className="text-accent font-semibold tracking-widest uppercase text-xs mb-4 block">Vertical Narrative</span>
                     <h2 className="text-4xl md:text-6xl font-serif font-medium mb-6 heading-gradient leading-tight">Designed for Trust</h2>
-                    <p className="text-lg text-muted leading-relaxed max-w-xl">
+                    <p className="text-lg text-foreground/80 leading-relaxed max-w-xl">
                         Guardian Angel AI® is designed for environments where both safety and privacy are non-negotiable.
                     </p>
                 </div>
@@ -140,16 +140,16 @@ export function UseCases() {
                             </div>
 
                             <div className="p-8 md:p-10 flex flex-col flex-grow">
-                                <h3 className="text-xl md:text-2xl font-serif font-medium mb-6">{useCase.title}</h3>
+                                <h3 className="text-xl md:text-2xl font-serif font-medium mb-6 text-foreground">{useCase.title}</h3>
 
                                 <div className="space-y-6 text-sm md:text-base">
                                     <div className="space-y-1">
                                         <span className="text-[10px] uppercase tracking-[0.2em] text-accent/60 font-bold block">Environment</span>
-                                        <p className="font-medium leading-relaxed">{useCase.problem}</p>
+                                        <p className="font-medium leading-relaxed text-foreground/90">{useCase.problem}</p>
                                     </div>
                                     <div className="space-y-1">
                                         <span className="text-[10px] uppercase tracking-[0.2em] text-accent/60 font-bold block">Solution</span>
-                                        <p className="text-muted leading-relaxed">{useCase.solution}</p>
+                                        <p className="text-foreground/70 leading-relaxed">{useCase.solution}</p>
                                     </div>
                                     <div className="pt-6 mt-4 border-t border-white/5">
                                         <span className="text-[10px] uppercase tracking-[0.2em] text-accent/60 font-bold block mb-2">Protocol</span>

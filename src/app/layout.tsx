@@ -13,11 +13,11 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Guardian Angel AI® | Aware, when you can’t®",
+  title: "Guardian Angel AI® | Aware, when you can’t be.®",
   description: "Guardian Angel AI® is privacy-preserving safety infrastructure designed to protect without surveillance. Institutional-grade safety for your most critical environments.",
   keywords: ["Guardian Angel AI", "Privacy-preserving AI", "Safety Infrastructure", "AI Safety", "Privacy First"],
   openGraph: {
-    title: "Guardian Angel AI® | Aware, when you can’t®",
+    title: "Guardian Angel AI® | Aware, when you can’t be.®",
     description: "Institutional-grade safety infrastructure. Privacy and ethics override conversion metrics.",
     url: "https://guardianangeldevice.com",
     siteName: "Guardian Angel AI",
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Guardian Angel AI® | Aware, when you can’t®",
-    description: "Aware, when you can’t®. Privacy-first safety infrastructure.",
+    title: "Guardian Angel AI® | Aware, when you can’t be.®",
+    description: "Aware, when you can’t be.®. Privacy-first safety infrastructure.",
   },
 };
 
