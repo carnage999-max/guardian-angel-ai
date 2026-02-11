@@ -70,61 +70,62 @@ export function UseCases() {
     };
 
     return (
-        <section id="use-cases" className="bg-white/2 py-24 relative overflow-hidden group/section">
-            {/* Header Content - Centered */}
+        <section id="use-cases" className="bg-white/2 py-24 relative overflow-hidden">
+            {/* Header Content */}
             <div className="max-w-7xl mx-auto px-6 mb-16">
                 <div className="max-w-2xl">
                     <span className="text-accent font-semibold tracking-widest uppercase text-xs mb-4 block">Vertical Narrative</span>
-                    <h2 className="text-4xl md:text-6xl font-serif font-medium mb-6 heading-gradient">Designed for Trust</h2>
-                    <p className="text-lg text-muted max-w-xl leading-relaxed">
+                    <h2 className="text-4xl md:text-6xl font-serif font-medium mb-6 heading-gradient leading-tight">Designed for Trust</h2>
+                    <p className="text-lg text-muted leading-relaxed max-w-xl">
                         Guardian Angel AI® is designed for environments where both safety and privacy are non-negotiable.
                     </p>
                 </div>
             </div>
 
             {/* Carousel Area */}
-            <div className="relative">
-                {/* Floating Navigation Controls - Always Visible on Tablet/Desktop */}
-                <div className="hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-40 items-center justify-center">
+            <div className="relative overflow-visible group/carousel">
+                {/* Floating Navigation Controls - Always Visible on Desktop */}
+                <div className="hidden md:flex absolute left-4 lg:left-8 top-[40%] -translate-y-1/2 z-50">
                     <button
                         onClick={() => scroll('left')}
-                        className="p-4 md:p-5 rounded-full border border-white/10 bg-[#06080C]/90 backdrop-blur-xl hover:border-accent/50 text-foreground shadow-[0_0_30px_rgba(0,0,0,0.5)] transition-all active:scale-90 hover:bg-accent/15 group"
+                        className="p-4 md:p-5 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl hover:border-accent/40 text-foreground/70 hover:text-foreground transition-all active:scale-90 hover:bg-white/10 group focus:outline-none"
                         aria-label="Scroll left"
                     >
                         <ChevronLeft size={28} className="group-hover:-translate-x-0.5 transition-transform" />
                     </button>
                 </div>
 
-                <div className="hidden md:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-40 items-center justify-center">
+                <div className="hidden md:flex absolute right-4 lg:right-8 top-[40%] -translate-y-1/2 z-50">
                     <button
                         onClick={() => scroll('right')}
-                        className="p-4 md:p-5 rounded-full border border-white/10 bg-[#06080C]/90 backdrop-blur-xl hover:border-accent/50 text-foreground shadow-[0_0_30px_rgba(0,0,0,0.5)] transition-all active:scale-90 hover:bg-accent/15 group"
+                        className="p-4 md:p-5 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl hover:border-accent/40 text-foreground/70 hover:text-foreground transition-all active:scale-90 hover:bg-white/10 group focus:outline-none"
                         aria-label="Scroll right"
                     >
                         <ChevronRight size={28} className="group-hover:translate-x-0.5 transition-transform" />
                     </button>
                 </div>
 
-                {/* The Scrollable Track */}
+                {/* The Track */}
                 <div
                     ref={scrollRef}
-                    className="flex gap-8 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-12 px-6 md:px-[max(24px,calc((100vw-1280px)/2))]"
+                    className="flex gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-16 px-6 md:px-[calc((100vw-1280px)/2+1.5rem)]"
                     style={{
-                        WebkitOverflowScrolling: 'touch'
+                        WebkitOverflowScrolling: 'touch',
+                        scrollPaddingLeft: '1.5rem'
                     }}
                 >
                     {cases.map((useCase, i) => (
                         <div
                             key={i}
-                            className="flex-shrink-0 w-[85vw] md:w-[450px] snap-start rounded-[32px] glass border border-white/5 overflow-hidden flex flex-col transition-all duration-300 hover:border-white/20"
+                            className="flex-shrink-0 w-[290px] md:w-[450px] snap-start rounded-[32px] glass border border-white/10 overflow-hidden flex flex-col transition-all duration-300 hover:border-white/30"
                         >
-                            <div className="relative h-56 bg-white/5 flex items-center justify-center overflow-hidden">
+                            <div className="relative h-48 md:h-60 bg-white/5 flex items-center justify-center overflow-hidden">
                                 {useCase.image ? (
                                     <>
                                         <img
                                             src={useCase.image}
                                             alt={useCase.title}
-                                            className="w-full h-full object-cover grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
+                                            className="w-full h-full object-cover grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-[#06080C]/80 via-transparent to-transparent" />
                                     </>
@@ -138,17 +139,17 @@ export function UseCases() {
                                 </div>
                             </div>
 
-                            <div className="p-10 flex flex-col flex-grow">
-                                <h3 className="text-2xl font-serif font-medium mb-6">{useCase.title}</h3>
+                            <div className="p-8 md:p-10 flex flex-col flex-grow">
+                                <h3 className="text-xl md:text-2xl font-serif font-medium mb-6">{useCase.title}</h3>
 
-                                <div className="space-y-6">
+                                <div className="space-y-6 text-sm md:text-base">
                                     <div className="space-y-1">
                                         <span className="text-[10px] uppercase tracking-[0.2em] text-accent/60 font-bold block">Environment</span>
-                                        <p className="text-base font-medium leading-relaxed">{useCase.problem}</p>
+                                        <p className="font-medium leading-relaxed">{useCase.problem}</p>
                                     </div>
                                     <div className="space-y-1">
                                         <span className="text-[10px] uppercase tracking-[0.2em] text-accent/60 font-bold block">Solution</span>
-                                        <p className="text-sm text-muted leading-relaxed">{useCase.solution}</p>
+                                        <p className="text-muted leading-relaxed">{useCase.solution}</p>
                                     </div>
                                     <div className="pt-6 mt-4 border-t border-white/5">
                                         <span className="text-[10px] uppercase tracking-[0.2em] text-accent/60 font-bold block mb-2">Protocol</span>
@@ -158,8 +159,8 @@ export function UseCases() {
                             </div>
                         </div>
                     ))}
-                    {/* Massive Spacer for centering items */}
-                    <div className="flex-shrink-0 w-[40vw] h-px invisible" />
+                    {/* Reliable end spacer */}
+                    <div className="flex-shrink-0 w-12 md:w-[32vw] h-px" aria-hidden="true" />
                 </div>
             </div>
         </section>
