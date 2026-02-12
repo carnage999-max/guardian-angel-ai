@@ -12,7 +12,7 @@ export function Hero() {
                 <div className="mb-8 w-full max-w-[600px] animate-fade-in">
                     <div className="relative aspect-[16/10] overflow-hidden rounded-3xl">
                         <Image
-                            src="/guardian-angel-ai-logo-bg-remove.png"
+                            src="/3d-product-nobg.png"
                             alt="Guardian Angel AI Device"
                             fill
                             className="object-contain"
