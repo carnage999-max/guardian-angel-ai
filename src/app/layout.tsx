@@ -16,6 +16,15 @@ export const metadata: Metadata = {
   title: "Guardian Angel AI® | Aware, when you can’t be.®",
   description: "Guardian Angel AI® is privacy-preserving safety infrastructure designed to protect without surveillance. Institutional-grade safety for your most critical environments.",
   keywords: ["Guardian Angel AI", "Privacy-preserving AI", "Safety Infrastructure", "AI Safety", "Privacy First"],
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: ["/favicon.ico"],
+  },
   openGraph: {
     title: "Guardian Angel AI® | Aware, when you can’t be.®",
     description: "Institutional-grade safety infrastructure. Privacy and ethics override conversion metrics.",
