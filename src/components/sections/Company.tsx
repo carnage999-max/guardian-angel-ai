@@ -195,6 +195,18 @@ export function Company() {
                             <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
                             <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>
                         </div>
+                        <div className="normal-case tracking-normal font-normal">
+                            Part of the{" "}
+                            <a
+                                href="https://se7eninc.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-accent hover:text-foreground transition-colors underline"
+                            >
+                                Se7en
+                            </a>{" "}
+                            family of companies.
+                        </div>
                     </div>
                 </div>
             </footer>
