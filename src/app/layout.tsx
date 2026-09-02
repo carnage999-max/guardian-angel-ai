@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -48,6 +49,11 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} ${outfit.variable} antialiased`}>
         {children}
+        <Script
+          src="https://now-hiring-eta.vercel.app/widget.js"
+          data-icon="ShieldCheck"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
